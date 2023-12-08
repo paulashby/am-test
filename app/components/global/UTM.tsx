@@ -25,13 +25,11 @@ export default function UTM() {
         }
     }
 
-    async function handleClick() {
-        
+    async function handleClick() {        
         await postReq("utm", data)
         .then (() => {
             setShowSuccess(true);
-        });
-        
+        });        
     }
     
     return (
