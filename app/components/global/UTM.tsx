@@ -6,12 +6,12 @@ import { postReq } from "@/app/api/requests";
 
 export default function UTM() {
     const searchParams = useSearchParams();
-    const mode = searchParams.get("mode");
+    const mode = searchParams?.get("mode");
     const [active, setActive] = useState(mode ? true : false);
     const [activeTab, setActiveTab] = useState(mode && mode === "business" ? "business" : "retail");
     const [showSuccess, setShowSuccess] = useState(false);
-    const formSlugs = searchParams.getAll("fm");
-    const campaign = searchParams.get("cn");
+    const formSlugs = searchParams?.getAll("fm");
+    const campaign = searchParams?.get("cn");
 
     const data = {
         name: `formSubmission_${new Date().toISOString()}`, 
