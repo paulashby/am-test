@@ -9,5 +9,6 @@ export async function POST(request) {
         utm_source
     }
     await createDocument("formSubmission", newSubmission);
+    
     return new Response(JSON.stringify({ ok: true }));
 }
