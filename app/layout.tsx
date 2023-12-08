@@ -1,6 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter } from "next/font/google"
+import Navbar from "./components/global/Navbar"
+import Footer from "./components/global/Footer"
+import TestButton from "./components/global/TestButton"
+import UTM from "./components/global/UTM"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-zinc-900 text-white`}>
+        <Navbar />
+        <UTM />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
