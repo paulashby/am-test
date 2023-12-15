@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/vision": "latest",
+    "@vercel/postgres": "^0.5.1",
     "next": "latest",
     "next-sanity": "^5.5.4",
     "react": "latest",
     "react-dom": "latest",
-    "sanity": "^3.16.7",
-    "@sanity/vision": "latest"
+    "sanity": "^3.16.7"
   },
   "devDependencies": {
     "@portabletext/react": "^3.0.7",
