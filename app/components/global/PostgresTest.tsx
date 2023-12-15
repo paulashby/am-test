@@ -8,7 +8,7 @@ export default function PostgresTest() {
     const [successMessage, setSuccessMessage] = useState("");
     
 
-    async function handleSubmit(e: FormEventHandler<HTMLFormElement>) {
+    async function handleSubmit(e: any) {
         e.preventDefault();     
         await postReq("prog-add-form", formName)
         .then (() => {
